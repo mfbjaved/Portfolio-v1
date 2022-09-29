@@ -9,13 +9,16 @@
     flex-direction: row;
     flex-wrap: nowrap;
     align-content:space-around;
-    align-items: center;
+    align-items:center;
     color:white;
     margin: 0;
     padding:0 150px 0px 150px;
     height:100%;
     width:100%;
     position:relative;
+    @media screen and (max-width:900px){
+        padding:0 50px 0px 50px;
+    }
 }
 
 .app__hero-tagline{
@@ -26,9 +29,11 @@
 
     h1{
         font-size:3rem;
+        font-weight:normal;
         font-family: var(--font-header);
         line-height:1.5;
         letter-spacing: 2px;
+        margin-bottom: 10px;
 
         span{
             box-shadow:0px -30px 0px 0px inset var(--secondary-color);
@@ -36,9 +41,13 @@
         }
     }
     p{
+        margin-top:10px;
         font-family: var(--font-base);
         font-size:1.5rem;
         padding-right:140px;
+        @media screen and (max-width:900px){
+            padding-right:0px;
+        }
     }
     a{
         text-decoration: none;
@@ -48,6 +57,29 @@
         &:hover{
             color:var(--secondary-color-30);
         }
+    }
+    @media screen and (max-width:900px){
+        h1{
+            font-size:2.5rem;
+        }
+        p{
+            font-size:1.5rem;
+        }
+    }
+}
+.app__hero-sociallinks{
+    a{ 
+        margin-right:10px;
+        margin-bottom:30px;
+        svg{
+            color:var(--secondary-color);
+            width:30px;
+            height:30px;
+        }
+    }
+    
+    @media screen and (max-width:900px){
+        display:none;
     }
 }
 .app__hero-image{
@@ -62,21 +94,37 @@
         width: 350px;
         width:350px;
     }
+    @media screen and (max-width:900px){
+        display:none;
+    }
 }
 #selfImage{
     z-index:5;
     
 }
 #pinkCircle{
-    z-index:1;
+    z-index:4;
     position:absolute;
     bottom:-25px;
     right:-25px;
 }
 #pinkGraident{
-    z-index:0;
+    z-index:2;
     position:absolute;
     width:800px;
     height:800px;
     right:-90px;
+    @media screen and (max-width:900px){
+        display:none;
+    }
+}
+#whiteLine{
+    z-index:0;
+    position:absolute;
+    width:900px;
+    height:880px;
+    right:-90px;
+    @media screen and (max-width:900px){
+        display:none;
+    }
 }

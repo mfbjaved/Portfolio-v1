@@ -17,6 +17,8 @@ font-family: 'Raleway', sans-serif; */
   --primary-color-30: #BDE0FE;
   --secondary-color-30:#FFC8DD;
   --grey-color:#D9D9D9;
+  --success-color:#4E937A;
+  --error-color:#D03625;
 }
 html,body { height: 100%; margin: 0px; padding: 0px; }
 body {
