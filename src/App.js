@@ -1,12 +1,13 @@
 import React from 'react'
-
-import { Hero } from './containers';
+import './App.scss';
+import { Hero, ProjectShowcase } from './containers';
 import { Navbar } from './components';
 const App = () => {
   return (
-    <div>
+    <div className="App">
       <Navbar />
       <Hero />
+      <ProjectShowcase />
     </div>
   )
 }

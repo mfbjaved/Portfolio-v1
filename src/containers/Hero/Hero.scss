@@ -1,7 +1,7 @@
 
 .app__hero{
     background-color: var(--primary-color);
-    height:880px;
+    height:100vh;
     width:100%;
 }
 .app__hero-content{
@@ -13,7 +13,7 @@
     color:white;
     margin: 0;
     padding:0 150px 0px 150px;
-    height:100%;
+    height:100vh;
     width:100%;
     position:relative;
     @media screen and (max-width:900px){
@@ -51,11 +51,11 @@
     }
     a{
         text-decoration: none;
-        color:white;
+        color:var(--secondary-color);
         font-size:medium;
         font-family: var(--font-header);
         &:hover{
-            color:var(--secondary-color-30);
+            color:white;
         }
     }
     @media screen and (max-width:900px){
@@ -75,6 +75,9 @@
             color:var(--secondary-color);
             width:30px;
             height:30px;
+            &:hover{
+                color:white;
+            }
         }
     }
     
@@ -113,17 +116,20 @@
     position:absolute;
     width:800px;
     height:800px;
-    right:-90px;
+    right:0px;
     @media screen and (max-width:900px){
         display:none;
     }
+    overflow-x: hidden;
 }
 #whiteLine{
     z-index:0;
     position:absolute;
-    width:900px;
-    height:880px;
-    right:-90px;
+    width:50vw;
+    height:100vh;
+    top:50;
+    overflow: hidden;
+    right:-0px;
     @media screen and (max-width:900px){
         display:none;
     }
