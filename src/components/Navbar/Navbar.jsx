@@ -1,4 +1,4 @@
-import React, {useState }from 'react'
+import React, {useState, useEffect }from 'react'
 import { motion} from "framer-motion"
 import {HiMenuAlt4, HiX} from 'react-icons/hi'
 import { SocialLinks } from '../';
@@ -6,10 +6,23 @@ import './Navbar.scss';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [scroll, setScroll] = useState(false)
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      const scrollCheck = window.scrollY > 100
+      if (scrollCheck !== scroll) {
+        setScroll(scrollCheck)
+        console.log(scrollCheck)
+      }
+    })
+  })
+  
+
 
   return (
     <nav className='app__navbar'>
-        <ul className='app__navbar-links'>
+        <ul className={ scroll ? 'app__navbar-links scroll' : 'app__navbar-links'}>
             {['Home', 'Projects', 'Articles', 'Skills'].map( (item) =>
             (<li className='app__flex p-text' key={`link-${item}`}>
                 <b><a href = {`#${item}`}>{item}</a></b>
